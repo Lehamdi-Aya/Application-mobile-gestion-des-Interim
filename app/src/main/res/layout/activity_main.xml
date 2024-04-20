@@ -1,19 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:background="@color/BlancCassee"
+    android:fillViewport="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/logInTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/dancing_bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="InterimFinder"
+            android:textColor="@color/Paradiso"
+            android:textSize="50sp" />
+
+        <ImageView
+            android:id="@+id/image_view_welcome_illustration"
+            android:layout_width="248dp"
+            android:layout_height="259dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_view_welcome_title"
+            style="@style/AppWelcomeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_50pxh"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/bleu"
+            android:text="Bienvenue sur Interim Finder" />
+
+        <TextView
+            android:id="@+id/text_view_welcome_description"
+            style="@style/AppTextRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_50pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.04"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:text="Notre application révolutionne le processus de recrutement intérimaire en offrant une plateforme conviviale pour les chercheurs d'emploi et les employeurs" />
+
+        <!-- Bouton S'inscrire -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_register"
+            style="@style/AppButtonIndigoRounded"
+            android:layout_width="@dimen/_206pxh"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_50pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_9pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:singleLine="true"
+            android:text="S'inscrire"
+            android:textAllCaps="false" />
+
+        <!-- Bouton Se connecter -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_login"
+            style="@style/AppButtonIndigoRounded"
+            android:layout_width="@dimen/_206pxh"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_50pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_9pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:singleLine="true"
+            android:text="Se connecter"
+            android:textAllCaps="false" />
+
+        <!-- Bouton Continuer en tant qu'anonyme -->
+        <Button
+            android:id="@+id/button_view_offers"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_50pxh"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:ellipsize="end"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="@dimen/_9pxh"
+            android:singleLine="true"
+            android:textFontWeight="700"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_18pxh"
+            app:textAllCaps="false"
+            android:text="Continuer en tant qu'anonyme" />
+
+    </LinearLayout>
+
+</ScrollView>
