@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/BlancCassee"
+    android:background="@color/Paradiso"
     android:fillViewport="true"
     >
     <LinearLayout
@@ -24,7 +24,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="InterimFinder"
-            android:textColor="@color/Paradiso"
+            android:textColor="@color/white"
             android:textSize="50sp" />
 
         <ImageView
@@ -52,7 +52,7 @@
             android:singleLine="true"
             android:fontFamily="@font/poppins"
             android:textColor="@color/bleu"
-            android:text="Bienvenue sur Interim Finder" />
+            android:text="WELCOME !" />
 
         <TextView
             android:id="@+id/text_view_welcome_description"
