@@ -32,6 +32,16 @@ android {
 }
 
 dependencies {
+    implementation ("com.android.support:appcompat-v7:28.0.0")
+    implementation ("com.android.support.constraint:constraint-layout:1.1.3")
+
+
+    implementation ("com.google.android.material:material:1.5.0")
+
+
+
+
+
 
     implementation(libs.appcompat)
     implementation(libs.material)

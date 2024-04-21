@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:fontFamily="@font/dancing_bold"
+            android:fontFamily="@font/pacifico"
             android:gravity="center"
             android:padding="5dp"
             android:text="InterimFinder"
@@ -68,6 +68,7 @@
             android:text="Notre application révolutionne le processus de recrutement intérimaire en offrant une plateforme conviviale pour les chercheurs d'emploi et les employeurs" />
 
         <!-- Bouton S'inscrire -->
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_register"
             style="@style/AppButtonIndigoRounded"

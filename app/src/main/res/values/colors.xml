@@ -34,11 +34,17 @@
     <color name="black_900_99">#99000000</color>
     <color name="black_900_33">#33000000</color>
     <color name="black_900_19">#19000000</color>
-    <color name="Paradiso">#3d9098</color>
+    <color name="Paradiso">#137C8B</color>
     <color name="BlancCassee">#EAE8D4</color>
     <!-- Indigo Variants -->
     <color name="indigo_700_99">#993e4f88</color>
     <color name="indigo_700_cc">#cc3e4f88</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="yellow">#fff5f504</color>
+    <color name="red">#B71C1C</color>
 
     <!-- Bluegray Variants -->
     <color name="bluegray_100_59">#59d9d9d9</color>
