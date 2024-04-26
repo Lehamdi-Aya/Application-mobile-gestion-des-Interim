@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="Chercher_Offre">
+        <State />
+      </entry>
       <entry key="Login">
         <State />
       </entry>
@@ -9,6 +12,9 @@
         <State />
       </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="inscriptionUtilisateur">
         <State />
       </entry>
     </value>

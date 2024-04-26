@@ -13,4 +13,17 @@
     <string name="ConfirmEmailAddress">Confirm Email Address</string>
     <string name="SignUp">Sign Up</string>
     <string name="registrationPage">Inscription</string>
+    <string name="_10_km">10 Km</string>
+    <string name="_20_km">20 Km</string>
+    <string name="_30_km">30 Km</string>
+    <string name="_40_km">40 Km</string>
+    <string name="_50_km">50 Km</string>
+    <string name="schedule_label">Schedule</string>
+    <string name="candidacy_label">Candidacy</string>
+    <string name="offers_label">Offers</string>
+    <string name="notifications_label">Notifications</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="users">Users</string>
+    <string name="login">Login</string>
+
 </resources>
