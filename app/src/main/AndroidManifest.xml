@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Interim"
         tools:targetApi="31">
         <activity
+            android:name=".AjouterOffre"
+            android:exported="false" />
+        <activity
             android:name=".FragmentContainerActivity"
             android:exported="false" />
         <activity
@@ -23,7 +26,6 @@
         <activity
             android:name=".Profile_Utilisateur"
             android:exported="false" />
-
         <activity
             android:name=".inscription_employeur_etapes03"
             android:exported="false" />
@@ -33,14 +35,12 @@
         <activity
             android:name=".inscription_employeur_etape01"
             android:exported="true" />
-
         <activity
             android:name=".Utilisateur_Anonyme"
             android:exported="true" />
         <activity
             android:name=".Bienvenue"
             android:exported="true" />
-
         <activity
             android:name=".TypeUtilisateur"
             android:exported="false" />
