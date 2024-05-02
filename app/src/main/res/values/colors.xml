@@ -41,9 +41,11 @@
     <color name="indigo_700_cc">#cc3e4f88</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#709CA7</color>
 
-    <color name="yellow">#fff5f504</color>
+    <color name="rose">#D2D2EB</color>
+    <color name="peche">#F7F6CF</color>
+    <color name="yellow">#D6DEDD</color>
     <color name="red">#B71C1C</color>
 
     <!-- Bluegray Variants -->

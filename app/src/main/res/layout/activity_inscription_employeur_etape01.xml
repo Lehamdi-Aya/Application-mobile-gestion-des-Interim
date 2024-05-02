@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".inscription_employeur_etape01">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_constraint_layout_employer_register_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/text_view_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:letterSpacing="0.09"
+            android:singleLine="true"
+            android:textColor="@color/gray_900"
+            android:textFontWeight="600"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/text_view_description"
+            style="@style/AppTextRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.04"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:text="Étape 01 d'inscription "
+            android:textColor="@color/black_900_99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_register" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_step1"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="306dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_description"
+            app:layout_constraintVertical_bias="0.13999999">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/yellow"
+
+                >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/_16pxh"
+                android:paddingRight="@dimen/_30pxh"
+                android:src="@drawable/register_step1_card_header" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_field_company_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_283pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_40pxh"
+                    android:hint="Campany name"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomStart="@dimen/_15pxh"
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_field_national_unique_number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_283pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:hint="Number"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomStart="@dimen/_15pxh"
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_national_unique_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_field_phone_number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_283pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:hint="Phone number"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomStart="@dimen/_15pxh"
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_phone_number"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_field_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_283pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:hint="Email"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomStart="@dimen/_15pxh"
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_email"
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_field_postal_adress"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_283pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:hint="Adresse"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomStart="@dimen/_15pxh"
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_postal_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_field_city"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_283pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:hint="City"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomStart="@dimen/_15pxh"
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_field_country"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_283pxh"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:hint="dddd"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusBottomStart="@dimen/_15pxh"
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_country"
+                        android:layout_width="match_parent"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/button_next"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginTop="28dp"
+                    android:text="Next"
+                    android:enabled="true"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

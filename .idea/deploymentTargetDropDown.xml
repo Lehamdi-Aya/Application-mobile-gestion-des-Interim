@@ -2,19 +2,22 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="Chercher_Offre">
-        <State />
-      </entry>
-      <entry key="Login">
+      <entry key="Acceuil_Utilisateur">
         <State />
       </entry>
       <entry key="MainActivity">
         <State />
       </entry>
+      <entry key="MesOffres">
+        <State />
+      </entry>
+      <entry key="Utilisateur_Anonyme">
+        <State />
+      </entry>
       <entry key="app">
         <State />
       </entry>
-      <entry key="inscriptionUtilisateur">
+      <entry key="inscription_employeur_etape01">
         <State />
       </entry>
     </value>

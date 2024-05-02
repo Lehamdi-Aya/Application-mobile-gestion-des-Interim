@@ -1,19 +1,25 @@
 package com.example.interim;
 
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class inscriptionUtilisateur extends AppCompatActivity {
+
+public class TypeUtilisateur extends AppCompatActivity {
+    private Button chercheurEmploiButton, employeur;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_inscription_utilisateur);
+        setContentView(R.layout.inscription_new_utili);
+
+
+
     }
 }

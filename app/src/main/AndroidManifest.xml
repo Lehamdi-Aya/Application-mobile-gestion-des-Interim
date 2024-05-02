@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,10 +15,37 @@
         android:theme="@style/Theme.Interim"
         tools:targetApi="31">
         <activity
-            android:name=".Chercher_Offre"
+            android:name=".FragmentContainerActivity"
             android:exported="false" />
         <activity
-            android:name=".inscriptionUtilisateur"
+            android:name=".ActivityNavigation"
+            android:exported="false" />
+        <activity
+            android:name=".Profile_Utilisateur"
+            android:exported="false" />
+
+        <activity
+            android:name=".inscription_employeur_etapes03"
+            android:exported="false" />
+        <activity
+            android:name=".inscription_employeur_etape02"
+            android:exported="false" />
+        <activity
+            android:name=".inscription_employeur_etape01"
+            android:exported="true" />
+
+        <activity
+            android:name=".Utilisateur_Anonyme"
+            android:exported="true" />
+        <activity
+            android:name=".Bienvenue"
+            android:exported="true" />
+
+        <activity
+            android:name=".TypeUtilisateur"
+            android:exported="false" />
+        <activity
+            android:name=".InscriptionUtilisateur"
             android:exported="true" />
         <activity
             android:name=".Login"
