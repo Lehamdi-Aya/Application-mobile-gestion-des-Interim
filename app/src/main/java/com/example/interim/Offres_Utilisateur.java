@@ -1,12 +1,16 @@
 package com.example.interim;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.card.MaterialCardView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +59,25 @@ public class Offres_Utilisateur extends Fragment {
         }
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_offres__utilisateur, container, false);
+        View view = inflater.inflate(R.layout.fragment_offres__utilisateur, container, false);
+
+        MaterialCardView entretienCardView = view.findViewById(R.id.entretien);
+        entretienCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Démarrer une nouvelle activité ici
+                Intent intent = new Intent(getActivity(), Calendrier_Entretien.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
+
+
 }

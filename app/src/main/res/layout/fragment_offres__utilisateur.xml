@@ -23,10 +23,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:paddingHorizontal="14dp"
-                android:paddingTop="14dp"
-                android:paddingBottom="24dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="20dp"
                 android:layout_width="match_parent"
-                android:backgroundTint="#EEE2DF"
+                android:backgroundTint="@color/white"
                 android:layout_height="70dp">
 
                 <TextView
@@ -34,13 +34,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mes offres"
-                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
                     android:textColor="@color/bleu"
                     android:fontFamily="@font/poppinsregular"
                     android:gravity="center"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="32dp"/>
+                    android:layout_marginTop="30dp"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -75,7 +76,7 @@
                         android:id="@+id/favoris_logo"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:src="@drawable/favoris"
+                        android:src="@drawable/star"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -135,7 +136,7 @@
                         android:id="@+id/entretienimg"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:src="@drawable/calender"
+                        android:src="@drawable/schedule"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -164,6 +165,68 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/candcloturee"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                style="?attr/materialCardViewElevatedStyle"
+                app:cardCornerRadius="10dp"
+                app:rippleColor="@color/gray_app"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginEnd="26dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:checkable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/entretien">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card_4"
+                    android:padding="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E0E2E8">
+
+                    <ImageView
+                        android:id="@+id/candcloturees"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/forbidden"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/candclo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Candidatures cloturées"
+                        android:textColor="@color/indigo_main"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/candcloturees" />
+
+                    <ImageView
+                        android:id="@+id/clo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/chevron_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/envoyés"
                 android:layout_height="wrap_content"
@@ -194,7 +257,7 @@
                         android:id="@+id/candenvoyees"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:src="@drawable/envy"
+                        android:src="@drawable/message"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -224,16 +287,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottom_navigation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:menu="@menu/bottom_navigation_menu" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

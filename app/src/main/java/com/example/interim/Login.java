@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity {
                     //Here you can write the codes if box is checked
                 }
                 // Si les champs sont remplis, démarrer FragmentContainerActivity
-                Intent intent = new Intent(Login.this, FragmentContainerActivity.class);
+                Intent intent = new Intent(Login.this, ActivityNavigation.class);
                 startActivity(intent);
                 finish();
             }
