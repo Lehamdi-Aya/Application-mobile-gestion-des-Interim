@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    >
+    <item
+        android:id="@+id/menu_item_schedule"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/menu_item_candidacy"
+        android:enabled="true"
+        android:icon="@drawable/text"
+        android:title="Gestion des candidatures"/>
+    <item
+        android:id="@+id/menu_item_offers"
+        android:enabled="true"
+        android:icon="@drawable/offre"
+        android:title="Crer une offre"/>
+
+
+</menu>

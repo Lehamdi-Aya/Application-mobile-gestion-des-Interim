@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gestionnaire_dashboard_constraint_layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Carte 1 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/gestionnaire_dashboard_materialCardView1"
+            style="?attr/materialCardViewElevatedStyle"
+            android:layout_width="@dimen/_150pxh"
+            android:layout_height="@dimen/_150pxh"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="50dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/gray_app"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Contenu de la carte 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gestionnaire_dashboard_constraint_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/peche"
+                >
+
+                <!-- Texte de la carte 1 -->
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view1_1"
+                    style="@style/OfferListItemStyleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/indigo_main"
+                    android:textSize="@dimen/_50pxh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="40" />
+
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view1_2"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_text_view1_1"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view1_1"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view1_1"
+                    android:text="Candidatures" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Carte 2 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/gestionnaire_dashboard_materialCardView2"
+            style="?attr/materialCardViewElevatedStyle"
+            android:layout_width="@dimen/_150pxh"
+            android:layout_height="@dimen/_150pxh"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="50dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/gray_app"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gestionnaire_dashboard_materialCardView1">
+
+            <!-- Contenu de la carte 2 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gestionnaire_dashboard_constraint_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D0E7DA"
+                >
+
+                <!-- Texte de la carte 2 -->
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view2_1"
+                    style="@style/OfferListItemStyleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/indigo_main"
+                    android:textSize="@dimen/_50pxh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="25" />
+
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view2_2"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_text_view2_1"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view2_1"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view2_1"
+                    android:text="Annonces" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Carte 3 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/gestionnaire_dashboard_materialCardView3"
+            style="?attr/materialCardViewElevatedStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_150pxh"
+            android:layout_marginTop="50dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/gray_app"
+            app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_materialCardView1"
+            app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_materialCardView1"
+            app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_materialCardView2">
+
+            <!-- Contenu de la carte 3 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gestionnaire_dashboard_constraint_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFDFDB">
+
+                <!-- Texte de la carte 3 -->
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view3_1"
+                    style="@style/OfferListItemStyleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/indigo_main"
+                    android:textSize="@dimen/_22pxh"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Request Jobs" />
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view3_2"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="25dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view3_1"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_1"
+                    android:text="data analyst" />
+
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view3_3"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view3_2"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_2"
+                    android:text="Software Engeeneering" />
+
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view3_4"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view3_3"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_3"
+                    android:text="Testeur" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Carte 4 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/gestionnaire_dashboard_materialCardView4"
+            style="?attr/materialCardViewElevatedStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_150pxh"
+            android:layout_marginTop="50dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:rippleColor="@color/gray_app"
+            app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_materialCardView3"
+            app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_materialCardView3"
+            app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_materialCardView3">
+
+            <!-- Contenu de la carte 4 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gestionnaire_dashboard_constraint_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D5D4E5"
+                >
+
+                <!-- Texte de la carte 4 -->
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view4_1"
+                    style="@style/OfferListItemStyleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/indigo_main"
+                    android:textSize="@dimen/_22pxh"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Proposed job" />
+
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view4_2"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="25dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view4_1"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_1"
+                    android:text="Agent" />
+
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view4_3"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view4_2"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_2"
+                    android:text="Prof" />
+
+                <TextView
+                    android:id="@+id/gestionnaire_dashboard_text_view4_4"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_9pxh"
+                    android:singleLine="true"
+                    android:textColor="@color/stroke_color"
+                    android:textSize="@dimen/_15pxh"
+                    app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view4_3"
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_3"
+                    android:text="mecanique" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Interim"
         tools:targetApi="31">
         <activity
+            android:name=".Cand_Envoyees"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityNavigationEmployeur"
+            android:exported="false" />
+        <activity
+            android:name=".LoginEmployeur"
+            android:exported="false" />
+        <activity
             android:name=".Calendrier_Entretien"
             android:exported="false" />
         <activity

@@ -24,7 +24,7 @@ Button terminer;
             public void onClick(View v) {
 
                 // Remplacer le fragment par le démarrage d'une nouvelle activité
-                Intent intent = new Intent(inscription_employeur_etapes03.this, Login.class);
+                Intent intent = new Intent(inscription_employeur_etapes03.this, LoginEmployeur.class);
                 startActivity(intent);
             }
         });

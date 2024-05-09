@@ -13,7 +13,10 @@
         android:id="@+id/root_constraint_layout_employer_register_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="-85dp"
+        tools:layout_editor_absoluteY="0dp">
+
         <TextView
             android:id="@+id/text_view_register"
             android:layout_width="wrap_content"
@@ -28,18 +31,22 @@
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/text_view_description"
             style="@style/AppTextRegular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="116dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="12dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.04"
             android:lineSpacingExtra="@dimen/_7pxh"
-            android:text="Étape 01 d'inscription "
+            android:textSize="20dp"
+            android:text="Informations personnelles "
             android:textColor="@color/black_900_99"
+
+            android:fontFamily="@font/bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_view_register" />
 
@@ -50,8 +57,8 @@
             android:layout_margin="8dp"
             android:layout_marginTop="48dp"
             android:layout_marginBottom="306dp"
-            app:cardElevation="8dp"
             app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
@@ -62,18 +69,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#F3FAFB"
                 android:orientation="vertical"
-                android:background="@color/yellow"
 
                 >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:paddingTop="@dimen/_16pxh"
-                android:paddingRight="@dimen/_30pxh"
-                android:src="@drawable/register_step1_card_header" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="@dimen/_16pxh"
+                    android:paddingRight="@dimen/_30pxh"
+                    android:src="@drawable/register_step1_card_header" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/text_field_company_name"
@@ -83,10 +90,10 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/_40pxh"
                     android:hint="Campany name"
-                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
                     app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                     app:boxCornerRadiusBottomStart="@dimen/_15pxh"
-                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edit_text_company_name"
@@ -102,10 +109,10 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:hint="Number"
-                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
                     app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                     app:boxCornerRadiusBottomStart="@dimen/_15pxh"
-                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edit_text_national_unique_number"
@@ -121,16 +128,16 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:hint="Phone number"
-                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
                     app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                     app:boxCornerRadiusBottomStart="@dimen/_15pxh"
-                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edit_text_phone_number"
-                        android:inputType="number"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -142,16 +149,16 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:hint="Email"
-                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
                     app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                     app:boxCornerRadiusBottomStart="@dimen/_15pxh"
-                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edit_text_email"
                         android:layout_width="match_parent"
-                        android:inputType="textEmailAddress"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -162,17 +169,16 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:hint="Adresse"
-                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
                     app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                     app:boxCornerRadiusBottomStart="@dimen/_15pxh"
-                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edit_text_postal_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
-
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -183,18 +189,18 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:hint="City"
-                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
                     app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                     app:boxCornerRadiusBottomStart="@dimen/_15pxh"
-                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edit_text_city"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:focusable="false"
                         android:clickable="true"
                         android:cursorVisible="false"
+                        android:focusable="false"
                         tools:ignore="TouchTargetSizeCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -206,18 +212,18 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:hint="dddd"
-                    app:boxCornerRadiusTopStart="@dimen/_15pxh"
                     app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                     app:boxCornerRadiusBottomStart="@dimen/_15pxh"
-                    app:boxCornerRadiusTopEnd="@dimen/_15pxh">
+                    app:boxCornerRadiusTopEnd="@dimen/_15pxh"
+                    app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edit_text_country"
                         android:layout_width="match_parent"
-                        android:focusable="false"
+                        android:layout_height="wrap_content"
                         android:clickable="true"
                         android:cursorVisible="false"
-                        android:layout_height="wrap_content" />
+                        android:focusable="false" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
@@ -227,8 +233,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end|bottom"
                     android:layout_marginTop="28dp"
-                    android:text="Next"
                     android:enabled="true"
+                    android:text="Next"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -236,4 +242,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
