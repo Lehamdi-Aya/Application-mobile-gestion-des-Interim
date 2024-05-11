@@ -3,130 +3,365 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Cand_Envoyees">
 
-
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/gestionnaire_see_offers_materialCard"
+        android:id="@+id/job_application_card"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         app:cardElevation="5dp"
         style="?attr/materialCardViewElevatedStyle"
         app:cardCornerRadius="10dp"
         app:rippleColor="@color/gray_app"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:clickable="true"
         android:focusable="true"
-        android:checkable="true"/>
+        android:checkable="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/gestionnaire_see_offers_constraint_layout"
-        android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_constraint_layout"
+            android:padding="13dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_view_offer_ja_initials"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/circle_blue_initial"
+                android:text="C"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/company_name"
+                android:text="Capgimini"
+                android:singleLine="true"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="4dp"
+                style="@style/OfferListItemStyleHeader"
+                app:layout_constraintStart_toEndOf="@id/text_view_offer_ja_initials"
+                app:layout_constraintTop_toTopOf="@id/text_view_offer_ja_initials"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_offer_ja_initials" />
+
+            <ImageView
+                android:id="@+id/icon_job_title"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/gray_suitcase_icon"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/gray_suitcase_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_offer_ja_initials" />
+
+            <TextView
+                android:id="@+id/text_view_job_title"
+                android:text="Data Analyst"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toEndOf="@id/icon_job_title"
+                app:layout_constraintTop_toTopOf="@id/icon_job_title"
+                app:layout_constraintBottom_toBottomOf="@id/icon_job_title" />
+
+            <ImageView
+                android:id="@+id/icon_salary"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/dollar_icon"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/dollar_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_job_title" />
+
+            <TextView
+                android:id="@+id/text_view_salary_range"
+                android:text="4.500 - 2.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toEndOf="@id/icon_salary"
+                app:layout_constraintTop_toTopOf="@id/icon_salary"
+                app:layout_constraintBottom_toBottomOf="@id/icon_salary" />
+
+            <ImageView
+                android:id="@+id/icon_location"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/gray_location_icon"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/gray_location_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_salary" />
+
+            <TextView
+                android:id="@+id/text_view_location"
+                android:text="Montpellier"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:letterSpacing="0.08"
+                android:layout_width="202dp"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toEndOf="@id/icon_location"
+                app:layout_constraintTop_toTopOf="@id/icon_location"
+                app:layout_constraintBottom_toBottomOf="@id/icon_location" />
+
+            <TextView
+                android:id="@+id/text_view_timeago"
+                tools:text="4 Days ago"
+                android:text="4 Days ago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:layout_marginTop="9dp"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_location"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <View
+                android:id="@+id/state_indicator"
+                android:background="@drawable/circle_red"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toStartOf="@id/text_view_state_text"
+                app:layout_constraintTop_toTopOf="@id/text_view_state_text"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_state_text"
+                android:layout_width="5dp"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/text_view_state_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:singleLine="true"
+                android:textColor="@color/red_A700"
+                android:text="Refusée"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_timeago" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/job_application_card2"
         android:layout_height="wrap_content"
-        android:background="@color/gray_100"
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        style="?attr/materialCardViewElevatedStyle"
+        app:cardCornerRadius="10dp"
+        app:rippleColor="@color/gray_app"
+        android:layout_marginTop="330dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        app:layout_constraintTop_toBottomOf="@id/job_application_card">
 
-        android:padding="13dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_constraint_layout2"
+            android:padding="13dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/gestionnaire_see_offers_job_logo"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/suitcase_blue_icon"
-            tools:src="@drawable/suitcase_blue_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/text_view_offer_ja_initials2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/circle_blue_initial"
+                android:text="A"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
-        <TextView
-            android:id="@+id/gestionnaire_see_offers_job_name"
-            style="@style/AppOfferTextRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:letterSpacing="0.08"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:singleLine="true"
-            app:layout_constraintBottom_toBottomOf="@id/gestionnaire_see_offers_job_logo"
-            app:layout_constraintStart_toEndOf="@id/gestionnaire_see_offers_job_logo"
-            app:layout_constraintTop_toTopOf="@id/gestionnaire_see_offers_job_logo"
-            android:text="Data Analyst" />
+            <TextView
+                android:id="@+id/company_name2"
+                android:text="Apple"
+                android:singleLine="true"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="4dp"
+                style="@style/OfferListItemStyleHeader"
+                app:layout_constraintStart_toEndOf="@id/text_view_offer_ja_initials2"
+                app:layout_constraintTop_toTopOf="@id/text_view_offer_ja_initials2"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_offer_ja_initials2" />
 
-        <ImageView
-            android:id="@+id/gestionnaire_see_offers_salary_logo"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="15dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/dollar_icon_blue"
-            tools:src="@drawable/dollar_icon_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gestionnaire_see_offers_job_logo"
-            tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/icon_job_title2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/gray_suitcase_icon"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/gray_suitcase_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_offer_ja_initials2" />
 
-        <TextView
-            android:id="@+id/gestionnaire_see_offers_logo_text"
-            style="@style/AppOfferTextRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:letterSpacing="0.08"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:singleLine="true"
-            app:layout_constraintBottom_toBottomOf="@id/gestionnaire_see_offers_salary_logo"
-            app:layout_constraintStart_toEndOf="@id/gestionnaire_see_offers_salary_logo"
-            app:layout_constraintTop_toTopOf="@id/gestionnaire_see_offers_salary_logo"
-            android:text="2500 € 3000 €" />
+            <TextView
+                android:id="@+id/text_view_job_title2"
+                android:text="Concepteur logiciel"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toEndOf="@id/icon_job_title2"
+                app:layout_constraintTop_toTopOf="@id/icon_job_title2"
+                app:layout_constraintBottom_toBottomOf="@id/icon_job_title2" />
 
-        <ImageView
-            android:id="@+id/gestionnaire_see_offers_location_logo"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="14dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/blue_location_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gestionnaire_see_offers_salary_logo"
-            tools:ignore="ContentDescription"
-            tools:src="@drawable/blue_location_icon" />
+            <ImageView
+                android:id="@+id/icon_salary2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/dollar_icon"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/dollar_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_job_title2" />
 
-        <TextView
-            android:id="@+id/gestionnaire_see_offers_location_text"
-            style="@style/AppOfferTextRegular"
-            android:layout_width="202dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:letterSpacing="0.08"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:singleLine="true"
-            app:layout_constraintBottom_toBottomOf="@id/gestionnaire_see_offers_location_logo"
-            app:layout_constraintStart_toEndOf="@id/gestionnaire_see_offers_location_logo"
-            app:layout_constraintTop_toTopOf="@id/gestionnaire_see_offers_location_logo"
-            android:text="Montpellier" />
+            <TextView
+                android:id="@+id/text_view_salary_range2"
+                android:text="4.500 - 2.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toEndOf="@id/icon_salary2"
+                app:layout_constraintTop_toTopOf="@id/icon_salary2"
+                app:layout_constraintBottom_toBottomOf="@id/icon_salary2" />
 
-        <TextView
-            android:id="@+id/gestionnaire_see_offers_date"
-            style="@style/AppOfferTextRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="8dp"
-            android:letterSpacing="0.08"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:singleLine="true"
-            android:textSize="@dimen/_9pxh"
-            android:text="29 Avril 2024"
-            tools:text="29 Avril 2024"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gestionnaire_see_offers_location_logo" />
+            <ImageView
+                android:id="@+id/icon_location2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/gray_location_icon"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/gray_location_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_salary2" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/text_view_location2"
+                android:text="USA"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:letterSpacing="0.08"
+                android:layout_width="202dp"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toEndOf="@id/icon_location2"
+                app:layout_constraintTop_toTopOf="@id/icon_location2"
+                app:layout_constraintBottom_toBottomOf="@id/icon_location2" />
+
+            <TextView
+                android:id="@+id/text_view_timeago2"
+                tools:text="4 Days ago"
+                android:text="7 Days ago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:layout_marginTop="9dp"
+                android:singleLine="true"
+                style="@style/AppOfferTextRegular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_location2"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <View
+                android:id="@+id/state_indicator2"
+                android:background="@drawable/circle_green"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toStartOf="@id/text_view_state_text2"
+                app:layout_constraintTop_toTopOf="@id/text_view_state_text2"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_state_text2"
+                android:layout_width="5dp"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/text_view_state_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:singleLine="true"
+                android:textColor="@color/green_800"
+                android:text="Acceptée"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_timeago2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </FrameLayout>

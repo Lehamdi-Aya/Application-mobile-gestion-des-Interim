@@ -94,10 +94,9 @@
         android:layout_marginStart="148dp"
         android:layout_marginTop="32dp"
         android:layout_weight="1"
-        android:background="@drawable/btn_login"
-        android:text="@string/Login"
+        android:backgroundTint="@color/amber_600"        android:text="@string/Login"
         app:layout_constraintStart_toStartOf="parent"
-
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/rememberMe"
         app:layout_constraintWidth_default="wrap" />
 

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/peche"
+    tools:context=".CandidaturesFavoris">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/gestionnaire_user_materialCard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        style="?attr/materialCardViewElevatedStyle"
+        app:cardCornerRadius="10dp"
+        app:rippleColor="@color/gray_app"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gestionnaire_user_constraint_layout_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="13dp">
+
+            <ImageView
+                android:id="@+id/gestionnaire_user_logo_company"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/star"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_company_name"
+                style="@style/OfferListItemStyleHeader"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="6dp"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:textColor="@color/indigo_main"
+                android:singleLine="true"
+                android:textSize="16dp"
+                app:layout_goneMarginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/gestionnaire_user_logo_company"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Capegemini" />
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_ceo"
+                style="@style/AppOfferTextRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="1dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="Data Analyst"
+                app:layout_constraintStart_toEndOf="@+id/gestionnaire_user_logo_company"
+                app:layout_constraintTop_toBottomOf="@+id/gestionnaire_user_text_view_company_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/gestionnaire_user_materialCard2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        style="?attr/materialCardViewElevatedStyle"
+
+        app:cardCornerRadius="10dp"
+        app:rippleColor="@color/gray_app"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        app:layout_constraintTop_toBottomOf="@id/gestionnaire_user_materialCard"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gestionnaire_user_constraint_layout_list_item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="13dp">
+
+            <ImageView
+                android:id="@+id/gestionnaire_user_logo_company2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/star"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_company_name2"
+                style="@style/OfferListItemStyleHeader"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="6dp"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:textColor="@color/indigo_main"
+                android:singleLine="true"
+                android:textSize="16dp"
+                app:layout_goneMarginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/gestionnaire_user_logo_company2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Sopra Steria" />
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_ceo2"
+                style="@style/AppOfferTextRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="1dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="Développeur web"
+                app:layout_constraintStart_toEndOf="@+id/gestionnaire_user_logo_company2"
+                app:layout_constraintTop_toBottomOf="@+id/gestionnaire_user_text_view_company_name2" />
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/gestionnaire_user_materialCard3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        style="?attr/materialCardViewElevatedStyle"
+
+        app:cardCornerRadius="10dp"
+        app:rippleColor="@color/gray_app"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        app:layout_constraintTop_toBottomOf="@id/gestionnaire_user_materialCard2"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gestionnaire_user_constraint_layout_list_item3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="13dp">
+
+            <ImageView
+                android:id="@+id/gestionnaire_user_logo_company3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/star"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_company_name3"
+                style="@style/OfferListItemStyleHeader"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="6dp"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:textColor="@color/indigo_main"
+                android:singleLine="true"
+                android:textSize="16dp"
+                app:layout_goneMarginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/gestionnaire_user_logo_company3"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Apple" />
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_ceo3"
+                style="@style/AppOfferTextRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="1dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="Concepteur logiciel"
+                app:layout_constraintStart_toEndOf="@+id/gestionnaire_user_logo_company3"
+                app:layout_constraintTop_toBottomOf="@+id/gestionnaire_user_text_view_company_name3" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/gestionnaire_user_materialCard4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        style="?attr/materialCardViewElevatedStyle"
+
+        app:cardCornerRadius="10dp"
+        app:rippleColor="@color/gray_app"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        app:layout_constraintTop_toBottomOf="@id/gestionnaire_user_materialCard3"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gestionnaire_user_constraint_layout_list_item4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="13dp">
+
+            <ImageView
+                android:id="@+id/gestionnaire_user_logo_company4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/star"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_company_name4"
+                style="@style/OfferListItemStyleHeader"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="6dp"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_9pxh"
+                android:textColor="@color/indigo_main"
+                android:singleLine="true"
+                android:textSize="16dp"
+                app:layout_goneMarginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/gestionnaire_user_logo_company4"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="IBM" />
+
+            <TextView
+                android:id="@+id/gestionnaire_user_text_view_ceo4"
+                style="@style/AppOfferTextRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="1dp"
+                android:letterSpacing="0.08"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="Dévelloppeur mobile"
+                app:layout_constraintStart_toEndOf="@+id/gestionnaire_user_logo_company4"
+                app:layout_constraintTop_toBottomOf="@+id/gestionnaire_user_text_view_company_name4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</FrameLayout>

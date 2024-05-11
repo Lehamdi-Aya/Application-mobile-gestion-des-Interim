@@ -38,7 +38,10 @@ dependencies {
     implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation ("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation ("androidx.navigation:navigation-ui-ktx:2.3.5")
-    implementation ("androidx.viewpager2:viewpager2:1.0.0")
+    implementation ("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
+
+    implementation("com.github.barteksc:android-pdf-viewer")
+    implementation ("com.github.barteksc:android-pdf-viewer")
     implementation ("androidx.activity:activity:1.8.0")
     implementation ("com.github.blackfizz:eazegraph:1.2.5l@aar")
     implementation ("com.nineoldandroids:library:2.4.0")

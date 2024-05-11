@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Interim"
         tools:targetApi="31">
         <activity
+            android:name=".Postuller_a_unOffre"
+            android:exported="true" />
+        <activity
+            android:name=".CandidaturesFavoris"
+            android:exported="false" />
+        <activity
             android:name=".Cand_Envoyees"
             android:exported="false" />
         <activity

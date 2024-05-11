@@ -87,7 +87,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins"
-                        android:text="Candidatures séléctionnés"
+                        android:text="Offres séléctionnés"
                         android:textColor="@color/indigo_main"
                         android:textSize="18dp"
                         android:textStyle="bold"

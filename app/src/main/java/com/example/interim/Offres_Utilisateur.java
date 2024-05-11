@@ -66,7 +66,7 @@ public class Offres_Utilisateur extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_offres__utilisateur, container, false);
         MaterialCardView CandEnvoyeesCardView = view.findViewById(R.id.envoyés);
-
+MaterialCardView CandFavoris=view.findViewById(R.id.material_card_0);
         MaterialCardView entretienCardView = view.findViewById(R.id.entretien);
         entretienCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +84,17 @@ public class Offres_Utilisateur extends Fragment {
                 startActivity(intent);
             }
         });
+        CandFavoris.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Démarrer une nouvelle activité ici
+                Intent intent = new Intent(getActivity(), CandidaturesFavoris.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
         return view;
     }
