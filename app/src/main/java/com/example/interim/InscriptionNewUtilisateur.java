@@ -7,24 +7,27 @@ import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
-public class InscriptionUtilisateur extends AppCompatActivity {
+public class InscriptionNewUtilisateur extends AppCompatActivity {
     Button envoyee;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.inscription_new_utili);
-
+        setContentView(R.layout.activity_inscription_new_utilisateur);
         envoyee = findViewById(R.id.buttonEnvoyer);
         envoyee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ouvrir l'activité Login lorsque l'utilisateur clique sur "envoyer"
-                Intent intent = new Intent(InscriptionUtilisateur.this, Bienvenue.class);
+
+                Intent intent = new Intent(InscriptionNewUtilisateur.this, Bienvenue.class);
                 startActivity(intent);
             }
         });
+
 
     }
 }

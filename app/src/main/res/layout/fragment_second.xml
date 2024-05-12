@@ -35,18 +35,12 @@
                     android:layout_height="wrap_content"
                     android:text="Candidatures accéptés" />
 
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/tab_item_refused"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Candidatures refusées" />
-
             </com.google.android.material.tabs.TabLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_job_application_list"
+            android:id="@+id/candidatures"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:overScrollMode="never"

@@ -191,7 +191,6 @@
             android:text="Suggestions de recherche"
             android:textColor="#000000"
             android:textSize="18sp"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search_header"
             android:layout_marginTop="16dp"
@@ -204,10 +203,10 @@
             style="?attr/materialCardViewElevatedStyle"
             app:cardCornerRadius="10dp"
             app:rippleColor="@color/gray_app"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginEnd="26dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:clickable="true"
             android:focusable="true"
             android:checkable="true"
@@ -222,38 +221,49 @@
                 android:layout_height="wrap_content"
                 android:background="#F0F0F2">
 
-
                 <ImageView
                     android:id="@+id/map"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/gps"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/favoris_text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/poppins"
-
                     android:text="Basée sur votre localisation
                        Toutes les offres autour de vous "
-                    android:textColor="	#C0C0C1"
-                    android:textSize="19dp"
+                    android:textColor="#C0C0C1"
+                    android:textSize="16dp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/map" />
-
+                    app:layout_constraintStart_toEndOf="@+id/map"
+                    app:layout_constraintTop_toTopOf="@id/map"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/offersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/material_card_0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -261,7 +271,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/bottom_navigation_menu" />
+            app:menu="@menu/bottom_navigation_menu" >
+
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation_manager"

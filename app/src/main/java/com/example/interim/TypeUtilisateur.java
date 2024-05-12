@@ -17,7 +17,7 @@ public class TypeUtilisateur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.inscription_new_utili);
+        setContentView(R.layout.activity_inscription_new_utilisateur);
 
 
 

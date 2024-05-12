@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@color/Paradiso"
     android:layout_height="match_parent"
-    android:id="@+id/second_register_fragment"
-    tools:context=".InscriptionUtilisateur">
-
+    tools:context=".InscriptionNewUtilisateur">
 
 
     <ScrollView
@@ -164,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                    android:hint="Adresse mail"
+                android:hint="Adresse mail"
                 app:boxCornerRadiusBottomStart="8dp"
                 app:boxCornerRadiusTopEnd="8dp"
                 app:boxCornerRadiusTopStart="8dp"
@@ -241,23 +239,14 @@
             <Button
                 android:id="@+id/buttonEnvoyer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="80dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
-                android:backgroundTint="@color/Paradiso"
-                android:text="Envoyé"
-                android:padding="10dp"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:fontFamily="@font/poppins"
-                android:textAllCaps="true">
-
-            </Button>
-
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/green_800"
+                android:text="@string/Login"
+                android:textColor="@color/black" />
         </LinearLayout>
 
 
     </ScrollView>
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

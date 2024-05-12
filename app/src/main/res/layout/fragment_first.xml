@@ -20,23 +20,22 @@
             android:layout_width="@dimen/_150pxh"
             android:layout_height="@dimen/_150pxh"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="75dp"
             android:checkable="true"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="10dp"
             app:cardElevation="5dp"
-            app:rippleColor="@color/gray_app"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:rippleColor="@color/gray_app">
 
             <!-- Contenu de la carte 1 -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gestionnaire_dashboard_constraint_layout1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/peche"
-                >
+                android:background="@color/peche">
 
                 <!-- Texte de la carte 1 -->
                 <TextView
@@ -48,28 +47,28 @@
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="40"
                     android:textColor="@color/indigo_main"
                     android:textSize="@dimen/_50pxh"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="40" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view1_2"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="Candidatures"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_text_view1_1"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view1_1"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view1_1"
-                    android:text="Candidatures" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view1_1" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -82,23 +81,22 @@
             android:layout_width="@dimen/_150pxh"
             android:layout_height="@dimen/_150pxh"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="75dp"
             android:checkable="true"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="10dp"
             app:cardElevation="5dp"
-            app:rippleColor="@color/gray_app"
+            app:layout_constraintStart_toEndOf="@+id/gestionnaire_dashboard_materialCardView1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/gestionnaire_dashboard_materialCardView1">
+            app:rippleColor="@color/gray_app">
 
             <!-- Contenu de la carte 2 -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gestionnaire_dashboard_constraint_layout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#D0E7DA"
-                >
+                android:background="#D0E7DA">
 
                 <!-- Texte de la carte 2 -->
                 <TextView
@@ -110,28 +108,28 @@
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="25"
                     android:textColor="@color/indigo_main"
                     android:textSize="@dimen/_50pxh"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="25" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view2_2"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="Offres publiées"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_text_view2_1"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view2_1"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view2_1"
-                    android:text="Annonces" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view2_1" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -149,10 +147,10 @@
             android:focusable="true"
             app:cardCornerRadius="10dp"
             app:cardElevation="5dp"
-            app:rippleColor="@color/gray_app"
-            app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_materialCardView1"
+            app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_materialCardView2"
             app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_materialCardView1"
-            app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_materialCardView2">
+            app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_materialCardView1"
+            app:rippleColor="@color/gray_app">
 
             <!-- Contenu de la carte 3 -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -167,61 +165,62 @@
                     style="@style/OfferListItemStyleHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="Postes les plus recherchés. "
                     android:textColor="@color/indigo_main"
                     android:textSize="@dimen/_22pxh"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Request Jobs" />
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view3_2"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="data analyst"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view3_1"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_1"
-                    android:text="data analyst" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_1" />
 
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view3_3"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="Software Engeeneering"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view3_2"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_2"
-                    android:text="Software Engeeneering" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_2" />
 
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view3_4"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="Testeur"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view3_3"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_3"
-                    android:text="Testeur" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view3_3" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -240,18 +239,17 @@
             android:focusable="true"
             app:cardCornerRadius="10dp"
             app:cardElevation="5dp"
-            app:rippleColor="@color/gray_app"
-            app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_materialCardView3"
+            app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_materialCardView3"
             app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_materialCardView3"
-            app:layout_constraintEnd_toEndOf="@+id/gestionnaire_dashboard_materialCardView3">
+            app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_materialCardView3"
+            app:rippleColor="@color/gray_app">
 
             <!-- Contenu de la carte 4 -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gestionnaire_dashboard_constraint_layout4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#D5D4E5"
-                >
+                android:background="#D5D4E5">
 
                 <!-- Texte de la carte 4 -->
                 <TextView
@@ -259,65 +257,79 @@
                     style="@style/OfferListItemStyleHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="Mes Rendez vous"
                     android:textColor="@color/indigo_main"
                     android:textSize="@dimen/_22pxh"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Proposed job" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view4_2"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="Réunion à 15h"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view4_1"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_1"
-                    android:text="Agent" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_1" />
 
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view4_3"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="RDV02: Poste : Chef de projet , à 8h"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view4_2"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_2"
-                    android:text="Prof" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_2" />
 
                 <TextView
                     android:id="@+id/gestionnaire_dashboard_text_view4_4"
-                    android:fontFamily="@font/poppins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins"
                     android:letterSpacing="0.05"
                     android:lineSpacingExtra="@dimen/_9pxh"
                     android:singleLine="true"
+                    android:text="RDV03: Poste:Concepteur logiciel,à 11h"
                     android:textColor="@color/stroke_color"
                     android:textSize="@dimen/_15pxh"
                     app:layout_constraintStart_toStartOf="@+id/gestionnaire_dashboard_text_view4_3"
-                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_3"
-                    android:text="mecanique" />
+                    app:layout_constraintTop_toBottomOf="@+id/gestionnaire_dashboard_text_view4_3" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/logInTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center"
+            android:text="Bienvenue"
+            android:textColor="@color/Paradiso"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.427"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="11dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

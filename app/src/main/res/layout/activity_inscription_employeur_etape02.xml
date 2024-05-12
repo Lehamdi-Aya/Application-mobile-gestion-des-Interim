@@ -34,7 +34,7 @@
             style="@style/AppTextRegular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="80dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.04"
             android:lineSpacingExtra="@dimen/_7pxh"
