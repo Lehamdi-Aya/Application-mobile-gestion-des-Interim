@@ -1,57 +1,40 @@
 package com.example.interim;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Profile_Utilisateur#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.android.material.textfield.TextInputEditText;
+
+import DAO.UserSessionManager;
+import entity.User;
+import BD.AppDatabase;
+import java.util.concurrent.Executors;
+
 public class Profile_Utilisateur extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private TextInputEditText firstNameEditText;
+    private TextInputEditText lastNameEditText;
+    private TextInputEditText nationalityEditText;
+    private TextInputEditText dateOfBirthEditText;
+    private TextInputEditText phoneNumberEditText;
+    private TextInputEditText emailEditText;
+    private TextInputEditText cityEditText;
+    private Button saveButton;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public Profile_Utilisateur() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Profile_Utilisateur.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Profile_Utilisateur newInstance(String param1, String param2) {
-        Profile_Utilisateur fragment = new Profile_Utilisateur();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private User currentUser;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // Handle arguments if any
         }
     }
 
@@ -59,6 +42,96 @@ public class Profile_Utilisateur extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile__utilisateur, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile__utilisateur, container, false);
+
+        firstNameEditText = view.findViewById(R.id.edit_text_first_name);
+        lastNameEditText = view.findViewById(R.id.edit_text_field_last_name);
+        nationalityEditText = view.findViewById(R.id.edit_text_field_nationality);
+        dateOfBirthEditText = view.findViewById(R.id.edit_text_date_of_birth);
+        phoneNumberEditText = view.findViewById(R.id.edit_text_phone_number);
+        emailEditText = view.findViewById(R.id.edit_text_field_email);
+        cityEditText = view.findViewById(R.id.edit_text_field_city);
+        saveButton = view.findViewById(R.id.save_button);
+
+        // Charger les informations utilisateur existantes
+        loadUserData();
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Profile_Utilisateur", "Le bouton Enregistrer a été cliqué.");
+                saveUserData();
+            }
+        });
+
+
+        return view;
+    }
+
+    private void loadUserData() {
+        UserSessionManager userSessionManager = new UserSessionManager(getContext());
+        int userId = userSessionManager.getUserId();
+
+        // Vérifiez si l'ID de l'utilisateur est valide
+        if (userId != -1) {
+            AppDatabase db = AppDatabase.getInstance(getContext());
+            Executors.newSingleThreadExecutor().execute(() -> {
+                currentUser = db.userDao().getUserById(userId);
+                if (currentUser != null) {
+                    // L'utilisateur existe dans la base de données
+                    getActivity().runOnUiThread(() -> {
+                        // Mettez à jour les champs d'édition avec les données de l'utilisateur
+                        firstNameEditText.setText(currentUser.getNom());
+                        lastNameEditText.setText(currentUser.getPrenom());
+                        nationalityEditText.setText(currentUser.getPays());
+                        dateOfBirthEditText.setText(currentUser.getDateDeNaissance());
+                        phoneNumberEditText.setText(currentUser.getPhone());
+                        emailEditText.setText(currentUser.getEmail());
+                        cityEditText.setText(currentUser.getPays());
+                    });
+                } else {
+                    // L'ID de l'utilisateur n'est pas valide ou aucun utilisateur correspondant n'a été trouvé
+                    getActivity().runOnUiThread(() -> {
+                        // Gérez le cas où l'ID de l'utilisateur n'est pas valide
+                        Toast.makeText(getContext(), "ID d'utilisateur non valide", Toast.LENGTH_SHORT).show();
+                    });
+                }
+            });
+        } else {
+            // Gérer le cas où l'ID de l'utilisateur n'est pas valide
+            Toast.makeText(getContext(), "ID d'utilisateur non valide", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void saveUserData() {
+        if (currentUser != null) {
+            currentUser.setNom(firstNameEditText.getText().toString());
+            currentUser.setPrenom(lastNameEditText.getText().toString());
+            currentUser.setPays(nationalityEditText.getText().toString());
+            currentUser.setDateDeNaissance(dateOfBirthEditText.getText().toString());
+            currentUser.setPhone(phoneNumberEditText.getText().toString());
+            currentUser.setEmail(emailEditText.getText().toString());
+            currentUser.setPassword(cityEditText.getText().toString());
+
+            AppDatabase db = AppDatabase.getInstance(getContext());
+            Executors.newSingleThreadExecutor().execute(() -> {
+                // Log avant la mise à jour de l'utilisateur
+                Log.d("Profile_Utilisateur", "Avant la mise à jour : " + currentUser.toString());
+
+                db.userDao().update(currentUser);
+
+                // Log après la mise à jour de l'utilisateur
+                Log.d("Profile_Utilisateur", "Après la mise à jour : " + currentUser.toString());
+
+                // Afficher un toast pour indiquer que la modification est réussie
+                getActivity().runOnUiThread(() -> {
+                    Toast.makeText(getContext(), "Modification réussie", Toast.LENGTH_SHORT).show();
+                });
+            });
+        }else {
+            Log.d("Profile_Utilisateur", "Erreur : currentUser est null");
+        }
     }
 }
+
+

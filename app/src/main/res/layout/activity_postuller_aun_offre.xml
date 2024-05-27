@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Postuller_a_unOffre">
-
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/candidacy_new_root_constraint_layout"
@@ -39,20 +38,18 @@
             android:background="@drawable/circle_blue_initial"
             android:layout_marginStart="12dp"
             android:text="AL"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="90dp"
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/text_view_candidacy_last_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginStart="12dp"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/poppins"
@@ -75,10 +72,6 @@
             android:layout_marginStart="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-
-
-
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/linear_layout_cv_choose"
@@ -131,7 +124,6 @@
                 android:layout_marginEnd="8dp"
                 android:layout_height="wrap_content"
                 android:text="view" />
-
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -185,10 +177,7 @@
                 android:visibility="gone"
                 android:layout_height="wrap_content"
                 android:text="view" />
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_candidacy_new"
@@ -211,9 +200,7 @@
             android:layout_marginTop="20dp"
             android:textAllCaps="false"
             android:layout_marginEnd="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-
-            />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Space
             app:layout_constraintStart_toStartOf="parent"
@@ -233,11 +220,50 @@
             app:layout_constraintTop_toBottomOf="@id/linear_layout_cover_letter_choose"
             app:layout_constraintVertical_bias="0.293">
 
+            <TextView
+                android:id="@+id/text_view_send_job_application_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="Are you sure you want to send this job application?"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_send_job_application"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_bg_indigo_rounded"
+                android:fontFamily="@font/poppins"
+                android:paddingEnd="50dp"
+                android:paddingStart="50dp"
+                android:text="Send"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_layout_send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_cover_letter_choose">
+
             <Button
                 android:id="@+id/button_send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Envoyer"
                 android:backgroundTint="@color/bleu"
                 android:textColor="@color/white" />

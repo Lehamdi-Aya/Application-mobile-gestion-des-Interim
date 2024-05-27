@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     dialog.dismiss();
-                    Intent intent = new Intent(MainActivity.this, TypeUtilisateur.class);
+                    Intent intent = new Intent(MainActivity.this, NewUtilisateur.class);
                     startActivity(intent);
                 }
             });

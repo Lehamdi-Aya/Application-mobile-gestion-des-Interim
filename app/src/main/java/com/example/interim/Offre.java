@@ -1,5 +1,6 @@
 package com.example.interim;
 public class Offre {
+    private boolean isFavorite;
     private String titre;
     private String localisation;
     private String description;
@@ -9,6 +10,13 @@ public class Offre {
         this.titre = titre;
         this.localisation = localisation;
         this.description = description;
+    }
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
     }
 
     public String getTitre() {

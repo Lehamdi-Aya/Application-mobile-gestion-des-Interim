@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,6 +47,7 @@ public class OffreAdapter extends RecyclerView.Adapter<OffreAdapter.OfferViewHol
         private TextView localisationTextView;
         private TextView descriptionTextView;
         private Button voirDetailsButton;
+        private ImageView imageViewFavorite;
 
         public OfferViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -53,6 +55,7 @@ public class OffreAdapter extends RecyclerView.Adapter<OffreAdapter.OfferViewHol
             localisationTextView = itemView.findViewById(R.id.localisationTextView);
             descriptionTextView = itemView.findViewById(R.id.descriptionTextView);
             voirDetailsButton = itemView.findViewById(R.id.buttonDetails);
+            imageViewFavorite = itemView.findViewById(R.id.imageViewFavorite);
         }
 
         public void bind(Offre offre) {
@@ -60,10 +63,31 @@ public class OffreAdapter extends RecyclerView.Adapter<OffreAdapter.OfferViewHol
             localisationTextView.setText(offre.getLocalisation());
             descriptionTextView.setText(offre.getDescription());
 
+            // Définir l'état initial de l'ImageView pour les favoris
+            if (offre.isFavorite()) {
+                imageViewFavorite.setImageResource(R.drawable.starr);
+            } else {
+                imageViewFavorite.setImageResource(R.drawable.favorite);
+            }
+
+            // Gestion du clic sur l'ImageView pour changer l'état des favoris
+            imageViewFavorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (offre.isFavorite()) {
+                        imageViewFavorite.setImageResource(R.drawable.favorite);
+                        offre.setFavorite(false);
+                    } else {
+                        imageViewFavorite.setImageResource(R.drawable.starr);
+                        offre.setFavorite(true);
+                    }
+                }
+            });
+
+            // Gestion du clic sur le bouton pour voir les détails
             voirDetailsButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // Ouvrir l'activité des détails de l'obuilder.setTitle("Titre du dialogue");
                     Intent intent = new Intent(context, OfferDetailsDialog.class);
                     intent.putExtra("titre", offre.getTitre());
                     intent.putExtra("localisation", offre.getLocalisation());
@@ -72,9 +96,6 @@ public class OffreAdapter extends RecyclerView.Adapter<OffreAdapter.OfferViewHol
                     context.startActivity(intent);
                 }
             });
-
-
-
         }
     }
 }

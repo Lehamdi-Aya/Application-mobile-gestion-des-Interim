@@ -32,6 +32,10 @@ android {
 }
 
 dependencies {
+
+    implementation ( "androidx.room:room-runtime:2.5.0")
+    annotationProcessor ("androidx.room:room-compiler:2.5.0" )// Pour Java
+
     implementation ("com.squareup.okhttp3:okhttp:4.12.0")
     implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation ("com.google.android.material:material:1.7.0")

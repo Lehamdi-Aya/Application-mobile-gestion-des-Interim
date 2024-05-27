@@ -37,16 +37,16 @@
 
     </LinearLayout>
 
-    <!-- ImageView -->
-
-    <!-- Bouton "Voir Détails" -->
     <ImageView
         android:id="@+id/imageViewFavorite"
         android:layout_width="25dp"
         android:layout_height="71dp"
         android:contentDescription="favoris"
         android:paddingEnd="4dp"
-        android:src="@drawable/favorite" />
+        android:src="@drawable/favorite"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground" />
 
     <Button
         android:id="@+id/buttonDetails"
@@ -57,5 +57,4 @@
         android:textSize="12sp"
         android:textColor="@color/Paradiso"
         android:layout_gravity="center_vertical" />
-
 </LinearLayout>
