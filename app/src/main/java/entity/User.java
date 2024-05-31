@@ -53,7 +53,7 @@ public class User {
         this.nom = nom;
     }
 
-    // Constructeurs, getters et setters
+
     public User(String nom, String prenom, String dateDeNaissance, String phone, String pays, String email, String password) {
         this.nom = nom;
         this.prenom = prenom;

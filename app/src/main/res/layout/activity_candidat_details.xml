@@ -88,17 +88,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/candidate_fullname" />
 
-            <View
-                android:id="@+id/state_indicator"
-                android:background="@drawable/circle_red"
-                android:layout_gravity="center"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="4dp"
-                app:layout_constraintEnd_toStartOf="@id/candidacy_state_text"
-                app:layout_constraintTop_toTopOf="@id/candidacy_state_text"
-                app:layout_constraintBottom_toBottomOf="@id/candidacy_state_text"
-                android:layout_width="5dp"
-                android:layout_height="5dp" />
 
             <TextView
                 android:id="@+id/candidacy_state_text"
@@ -110,7 +99,7 @@
                 android:lineSpacingExtra="@dimen/_9pxh"
                 android:singleLine="true"
                 android:textColor="@color/red_A700"
-                android:text="Refused"
+                android:text=""
                 android:textAllCaps="false"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -523,7 +512,9 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </ScrollView>
 

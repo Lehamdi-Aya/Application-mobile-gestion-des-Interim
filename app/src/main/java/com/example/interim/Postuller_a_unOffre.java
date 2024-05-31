@@ -1,8 +1,10 @@
 package com.example.interim;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -10,9 +12,9 @@ import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import BD.AppDatabase;
+import entity.Candidature;
 
 public class Postuller_a_unOffre extends AppCompatActivity {
     private Button buttonSend;
@@ -20,22 +22,27 @@ public class Postuller_a_unOffre extends AppCompatActivity {
     private ActivityResultLauncher<Intent> letterLauncher;
     private TextView textViewCvChooserHint;
     private TextView textViewCoverLetterHint;
+    private Uri cvUri;
+    private Uri coverLetterUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postuller_aun_offre);
 
+        // Initialisation des vues
         textViewCvChooserHint = findViewById(R.id.text_view_cv_chooser_hint_candidacy_new);
         textViewCoverLetterHint = findViewById(R.id.text_view_cover_letter_hint_candidacy_new);
         buttonSend = findViewById(R.id.button_send);
+
+        // Initialisation des lanceurs d'activités
         cvLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        Uri uri = result.getData().getData();
-                        textViewCvChooserHint.setText(uri.getPath());
-                        // Do something with the URI, e.g., store it or display the file name
+                        cvUri = result.getData().getData();
+                        textViewCvChooserHint.setText(cvUri.getPath());
+                        getContentResolver().takePersistableUriPermission(cvUri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     }
                 }
         );
@@ -44,9 +51,9 @@ public class Postuller_a_unOffre extends AppCompatActivity {
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        Uri uri = result.getData().getData();
-                        textViewCoverLetterHint.setText(uri.getPath());
-                        // Do something with the URI, e.g., store it or display the file name
+                        coverLetterUri = result.getData().getData();
+                        textViewCoverLetterHint.setText(coverLetterUri.getPath());
+                        getContentResolver().takePersistableUriPermission(coverLetterUri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     }
                 }
         );
@@ -66,9 +73,52 @@ public class Postuller_a_unOffre extends AppCompatActivity {
         });
 
         buttonSend.setOnClickListener(view -> {
-            Toast.makeText(Postuller_a_unOffre.this, "Votre candidature a été bien envoyée", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Postuller_a_unOffre.this, ActivityNavigation.class);
-            startActivity(intent);
+            if (cvUri != null && coverLetterUri != null) {
+                Intent intent = getIntent();
+                int offreId = intent.getIntExtra("offreId", -1);
+
+                // Récupérer userId depuis les préférences partagées
+                SharedPreferences sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+                int userId = sharedPreferences.getInt("userId", -1);
+
+                Log.d("Postuller_a_unOffre", "Received offreId: " + offreId); // Log pour vérifier l'offreId reçu
+
+
+                Log.d("Postuller_a_unOffre", "offreId: " + offreId);
+                Log.d("Postuller_a_unOffre", "userId: " + userId);
+
+                if (userId != -1) {
+                    new Thread(() -> {
+                        AppDatabase db = AppDatabase.getInstance(getApplicationContext());
+
+                        boolean isValidOffer = db.candidatureDao().isValidOffer(offreId);
+                        boolean isValidUser = db.candidatureDao().isValidUser(userId);
+
+                        Log.d("Postuller_a_unOffre", "isValidOffer: " + isValidOffer);
+                        Log.d("Postuller_a_unOffre", "isValidUser: " + isValidUser);
+
+                        // Vérifiez que les clés étrangères existent
+                        if (isValidOffer && isValidUser) {
+                            Candidature candidature = new Candidature(offreId, userId, cvUri.toString(), coverLetterUri.toString());
+                            db.candidatureDao().insert(candidature);
+
+                            runOnUiThread(() -> {
+                                Toast.makeText(Postuller_a_unOffre.this, "Votre candidature a été bien envoyée", Toast.LENGTH_SHORT).show();
+                                Intent navigationIntent = new Intent(Postuller_a_unOffre.this, ActivityNavigation.class);
+                                startActivity(navigationIntent);
+                            });
+                        } else {
+                            runOnUiThread(() -> {
+                                Toast.makeText(Postuller_a_unOffre.this, "Erreur: offre ou utilisateur invalide", Toast.LENGTH_SHORT).show();
+                            });
+                        }
+                    }).start();
+                } else {
+                    Toast.makeText(Postuller_a_unOffre.this, "Erreur: utilisateur non trouvé", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(Postuller_a_unOffre.this, "Veuillez ajouter un CV et une lettre de motivation", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }

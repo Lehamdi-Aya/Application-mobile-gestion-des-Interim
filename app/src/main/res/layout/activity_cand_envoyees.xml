@@ -37,7 +37,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:background="@drawable/circle_blue_initial"
-                android:text="C"
+                android:text="A"
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:textSize="18sp"
@@ -48,7 +48,7 @@
 
             <TextView
                 android:id="@+id/company_name"
-                android:text="Capgimini"
+                android:text="AEDL"
                 android:singleLine="true"
                 android:layout_width="202dp"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
 
             <TextView
                 android:id="@+id/text_view_job_title"
-                android:text="Data Analyst"
+                android:text="Develloppeur Android"
                 android:layout_width="202dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -101,7 +101,7 @@
 
             <TextView
                 android:id="@+id/text_view_salary_range"
-                android:text="4.500 - 2.000"
+                android:text="2500-4000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -141,8 +141,8 @@
 
             <TextView
                 android:id="@+id/text_view_timeago"
-                tools:text="4 Days ago"
-                android:text="4 Days ago"
+                tools:text="1 Days ago"
+                android:text="1 Days ago"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
@@ -157,7 +157,7 @@
 
             <View
                 android:id="@+id/state_indicator"
-                android:background="@drawable/circle_red"
+                android:background="@drawable/circle_green"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
@@ -176,8 +176,8 @@
                 android:letterSpacing="0.05"
                 android:lineSpacingExtra="@dimen/_9pxh"
                 android:singleLine="true"
-                android:textColor="@color/red_A700"
-                android:text="Refusée"
+                android:textColor="@color/green_800"
+                android:text="Acceptée"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="@id/text_view_timeago" />
@@ -226,7 +226,7 @@
 
             <TextView
                 android:id="@+id/company_name2"
-                android:text="Apple"
+                android:text="AEDL"
                 android:singleLine="true"
                 android:layout_width="202dp"
                 android:layout_height="wrap_content"
@@ -279,7 +279,7 @@
 
             <TextView
                 android:id="@+id/text_view_salary_range2"
-                android:text="4.500 - 2.000"
+                android:text="3000 - 5000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -305,7 +305,7 @@
 
             <TextView
                 android:id="@+id/text_view_location2"
-                android:text="USA"
+                android:text="Montpellier"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:letterSpacing="0.08"
@@ -319,8 +319,8 @@
 
             <TextView
                 android:id="@+id/text_view_timeago2"
-                tools:text="4 Days ago"
-                android:text="7 Days ago"
+                tools:text="1 Days ago"
+                android:text="1 Days ago"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
@@ -335,7 +335,7 @@
 
             <View
                 android:id="@+id/state_indicator2"
-                android:background="@drawable/circle_green"
+                android:background="@drawable/circle_red"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="4dp"
@@ -354,8 +354,8 @@
                 android:letterSpacing="0.05"
                 android:lineSpacingExtra="@dimen/_9pxh"
                 android:singleLine="true"
-                android:textColor="@color/green_800"
-                android:text="Acceptée"
+                android:textColor="@color/red_A700"
+                android:text="Refusée"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="@id/text_view_timeago2" />

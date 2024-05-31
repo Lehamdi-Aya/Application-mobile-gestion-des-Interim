@@ -4,7 +4,15 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -16,7 +24,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Interim"
         tools:targetApi="31">
-
+        <activity
+            android:name=".DeleteDataActivity"
+            android:exported="true" />
         <activity
             android:name=".NewUtilisateur"
             android:exported="false" />
@@ -38,7 +48,9 @@
             android:exported="false" />
         <activity
             android:name=".ActivityNavigationEmployeur"
-            android:exported="false" />
+            android:windowSoftInputMode="adjustPan|adjustResize"
+
+        android:exported="false" />
         <activity
             android:name=".LoginEmployeur"
             android:exported="false" />
@@ -53,7 +65,9 @@
             android:exported="false" />
         <activity
             android:name=".ActivityNavigation"
-            android:exported="false" />
+            android:windowSoftInputMode="adjustPan|adjustResize"
+
+        android:exported="false" />
         <activity
             android:name=".Profile_Utilisateur"
             android:exported="false" />

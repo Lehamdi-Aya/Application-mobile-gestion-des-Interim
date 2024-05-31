@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,13 +12,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import entity.CandidatureWithUserName;
+
 public class CandidaturesAdapter extends RecyclerView.Adapter<CandidaturesAdapter.CandidaturesViewHolder> {
 
-    private List<Candidature> CandidatureList;
+    private List<CandidatureWithUserName> candidatureList;
     private Context context;
 
-    public CandidaturesAdapter(List<Candidature> CandidatureList, Context context) {
-        this.CandidatureList = CandidatureList;
+    public CandidaturesAdapter(List<CandidatureWithUserName> candidatureList, Context context) {
+        this.candidatureList = candidatureList;
         this.context = context;
     }
 
@@ -32,37 +33,33 @@ public class CandidaturesAdapter extends RecyclerView.Adapter<CandidaturesAdapte
 
     @Override
     public void onBindViewHolder(@NonNull CandidaturesViewHolder holder, int position) {
-        Candidature candidature = CandidatureList.get(position);
+        CandidatureWithUserName candidature = candidatureList.get(position);
         holder.bind(candidature);
     }
 
     @Override
     public int getItemCount() {
-        return CandidatureList.size();
+        return candidatureList.size();
     }
 
     public class CandidaturesViewHolder extends RecyclerView.ViewHolder {
         private TextView titreTextView;
-private TextView datedenaissance;
-
 
         public CandidaturesViewHolder(@NonNull View itemView) {
             super(itemView);
             titreTextView = itemView.findViewById(R.id.nomPrenom);
-            datedenaissance=itemView.findViewById(R.id.datedenaissance);
-
         }
 
-        public void bind(Candidature candidature) {
-            titreTextView.setText(candidature.getNom());
-            datedenaissance.setText(candidature.getDatedenaissance());
+        public void bind(CandidatureWithUserName candidature) {
+            String fullName = candidature.userName + " " + candidature.userPrenom;
+            titreTextView.setText(fullName);
             titreTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     Intent intent = new Intent(context, CandidatDetails.class);
-                    intent.putExtra("Nom", candidature.getNom());
-                    intent.putExtra("Datedenaissance", candidature.getDatedenaissance());
+                    intent.putExtra("Nom", candidature.userName);
+                    intent.putExtra("Prenom", candidature.userPrenom);
+                    intent.putExtra("CandidatureId", candidature.getId()); // Ajoutez cet extra
                     context.startActivity(intent);
                 }
             });

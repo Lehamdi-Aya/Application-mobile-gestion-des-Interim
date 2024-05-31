@@ -1,61 +1,79 @@
 package com.example.interim;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import java.util.ArrayList;
 import java.util.List;
+
+import BD.AppDatabase;
+import entity.CandidatureWithUserName;
 
 public class SecondFragment extends Fragment {
 
-    private RecyclerView recyclerView;
-    private CandidaturesAdapter adapter;
-    private List<Candidature> candidatureList;
-
-    public SecondFragment() {
-        // Required empty public constructor
-    }
-
-    public static SecondFragment newInstance() {
-        return new SecondFragment();
-    }
+    private RecyclerView candidaturesRecyclerView;
+    private CandidaturesAdapter candidaturesAdapter;
+    private AppDatabase db;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        db = AppDatabase.getInstance(getContext());
     }
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_second, container, false);
 
-        // Récupérer la référence de la RecyclerView depuis le layout
-        recyclerView = view.findViewById(R.id.candidatures);
+        candidaturesRecyclerView = view.findViewById(R.id.candidatures);
+        candidaturesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        // Initialiser la liste des candidatures et l'adaptateur
-        candidatureList = new ArrayList<>();
-        adapter = new CandidaturesAdapter(candidatureList, getContext());
-
-        // Configurer la RecyclerView avec un LayoutManager et l'adaptateur
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(adapter);
-
-        // Ajouter des candidatures à la liste
-        candidatureList.add(new Candidature("Aya lehamdi","29/04/1998"));
-        candidatureList.add(new Candidature("Lina lehamdi","04/03/2000"));
-        candidatureList.add(new Candidature("Louay lehamdi" ,"15/01/1996"));
-
-        // Notifier à l'adaptateur que les données ont changé
-        adapter.notifyDataSetChanged();
+        int offerId = getOfferId(); // Récupérez l'ID de l'offre
+        Log.d("SecondFragment", "Offer ID: " + offerId); // Ajoutez ce log pour vérifier l'ID de l'offre
+        loadCandidatures(offerId);
 
         return view;
+    }
+
+    private void loadCandidatures(int offerId) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                List<CandidatureWithUserName> candidatures = db.candidatureDao().getCandidaturesWithUserNameByOfferId(offerId);
+                Log.d("SecondFragment", "Candidatures: " + candidatures); // Ajoutez ce log pour vérifier les candidatures récupérées
+
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (candidatures != null && !candidatures.isEmpty()) {
+                            candidaturesAdapter = new CandidaturesAdapter(candidatures, getContext());
+                            candidaturesRecyclerView.setAdapter(candidaturesAdapter);
+                        } else {
+                            Toast.makeText(getContext(), "Aucune candidature trouvée", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        }).start();
+    }
+
+    private int getOfferId() {
+        // Récupérez l'ID de l'offre à partir des préférences partagées ou d'une autre source
+        SharedPreferences prefs = getActivity().getSharedPreferences("offer_prefs", Context.MODE_PRIVATE);
+        int offerId = prefs.getInt("offerId", -1);
+        Log.d("SecondFragment", "Offer ID: " + offerId); // Ajoutez ce log pour vérifier l'ID de l'offre
+        return offerId; // Retourne -1 si l'ID de l'offre n'est pas trouvé
     }
 }

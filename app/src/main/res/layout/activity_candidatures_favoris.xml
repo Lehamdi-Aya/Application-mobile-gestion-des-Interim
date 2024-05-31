@@ -280,7 +280,7 @@
                 app:layout_goneMarginStart="10dp"
                 app:layout_constraintStart_toEndOf="@id/gestionnaire_user_logo_company4"
                 app:layout_constraintTop_toTopOf="parent"
-                android:text="IBM" />
+                android:text="AEDL" />
 
             <TextView
                 android:id="@+id/gestionnaire_user_text_view_ceo4"
@@ -292,7 +292,7 @@
                 android:letterSpacing="0.08"
                 android:lineSpacingExtra="@dimen/_7pxh"
                 android:singleLine="true"
-                android:text="Dévelloppeur mobile"
+                android:text="Develloppeur Android"
                 app:layout_constraintStart_toEndOf="@+id/gestionnaire_user_logo_company4"
                 app:layout_constraintTop_toBottomOf="@+id/gestionnaire_user_text_view_company_name4" />
 

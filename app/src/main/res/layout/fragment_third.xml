@@ -183,8 +183,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:clickable="true"
-                            android:cursorVisible="false"
-                            android:focusable="false" />
+                             />
 
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -264,8 +263,7 @@
                             android:layout_height="wrap_content"
                             android:clickable="true"
                             android:cursorVisible="false"
-                            android:focusable="false"
-                            tools:ignore="TouchTargetSizeCheck" />
+                      />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -292,85 +290,71 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:clickable="true"
-                            android:cursorVisible="false"
-                            android:focusable="false" />
+                           />
                     </com.google.android.material.textfield.TextInputLayout>
-
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/text_field_new_offer_contract_type"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="20dp"
+                        android:hint="Type de contrat"
                         app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                         app:boxCornerRadiusBottomStart="@dimen/_15pxh"
                         app:boxCornerRadiusTopEnd="@dimen/_15pxh"
                         app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
-                        <AutoCompleteTextView
+                        <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/edit_text_new_offer_contract_type"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:dropDownHeight="300dp"
-                            android:hint="Type de contrat"
-                            android:inputType="none"
-                            android:nestedScrollingEnabled="true" />
+                            android:hint="Type de contrat" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/text_field_new_offer_category"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="20dp"
+                        android:hint="Catégorie"
                         app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                         app:boxCornerRadiusBottomStart="@dimen/_15pxh"
                         app:boxCornerRadiusTopEnd="@dimen/_15pxh"
-                        app:boxCornerRadiusTopStart="@dimen/_15pxh"
-                        app:layout_constraintStart_toStartOf="parent"
-                        >
+                        app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
-                        <AutoCompleteTextView
+                        <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/edit_text_new_offer_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:dropDownHeight="300dp"
-                            android:hint="Ctégorie"
-                            android:inputType="none"
-                            android:nestedScrollingEnabled="true" />
-
+                            android:hint="Catégorie" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/text_field_new_offer_profession"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="20dp"
+                        android:hint="Spécialité demandé"
                         app:boxCornerRadiusBottomEnd="@dimen/_15pxh"
                         app:boxCornerRadiusBottomStart="@dimen/_15pxh"
                         app:boxCornerRadiusTopEnd="@dimen/_15pxh"
-                        app:boxCornerRadiusTopStart="@dimen/_15pxh"
-                        app:layout_constraintStart_toStartOf="parent"
-                        >
+                        app:boxCornerRadiusTopStart="@dimen/_15pxh">
 
-                        <AutoCompleteTextView
+                        <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/edit_text_new_offer_profession"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:dropDownHeight="300dp"
-                            android:hint="Spécialité demandé"
-                            android:inputType="none"
-                            android:nestedScrollingEnabled="true" />
-
+                            android:hint="Spécialité demandé" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -395,7 +379,7 @@
                             android:hint="Déscription de l'offre"
                             android:inputType="textMultiLine"
                             android:lines="15"
-                            android:scrollbars="none" />
+                         />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -416,7 +400,7 @@
                         android:lineSpacingExtra="@dimen/_9pxh"
                         android:singleLine="true"
                         android:text="Create"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="2dp"
                         android:textAllCaps="false"
                         android:layout_marginEnd="14dp"
                         android:backgroundTint="@color/Paradiso"

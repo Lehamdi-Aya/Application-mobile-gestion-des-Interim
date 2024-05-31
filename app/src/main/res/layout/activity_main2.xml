@@ -150,7 +150,7 @@
                     android:drawablePadding="20dp"
                     android:padding="15dp"
                     android:inputType="textEmailAddress"
-                    android:drawableStart="@drawable/baseline_mail_24"
+                    android:drawableStart="@drawable/pays"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -240,7 +240,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/green_800"
+                android:backgroundTint="@color/Paradiso"
                 android:text="@string/Login"
                 android:textColor="@color/black" />
         </LinearLayout>

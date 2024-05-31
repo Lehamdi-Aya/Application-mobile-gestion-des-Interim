@@ -28,6 +28,27 @@
         android:textSize="12sp"
         android:layout_marginBottom="16dp"/>
 
+    <TextView
+        android:id="@+id/salaireTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/dateDebutTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/employerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp"/>
+
     <Button
         android:backgroundTint="@color/Paradiso"
         android:id="@+id/postulerButton"
